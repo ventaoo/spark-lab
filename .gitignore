@@ -1,0 +1,4 @@
+*.gz
+food_kmeans_model/*
+
+main.py
