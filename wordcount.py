@@ -13,8 +13,13 @@ word_counts = text.flatMap(lambda line: line.split(" ")) \
     .map(lambda word: (word, 1)) \
     .reduceByKey(lambda a, b: a + b)
 
-# 输出结果
-print(word_counts.collect())
+# 收集结果
+results = word_counts.collect()
+
+# 写入文件（本地文件系统）
+with open("wordcount_result.txt", "w", encoding="utf-8") as f:
+    for word, count in results:
+        f.write(f"{word}\t{count}\n")
 
 # 停止 SparkSession
 spark.stop()
