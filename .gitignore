@@ -1,4 +1,8 @@
 *.gz
 food_kmeans_model/*
 
-main.py
+data/*
+models/*
+outputs/*
+
+*/__pycache__
