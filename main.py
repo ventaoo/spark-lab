@@ -12,6 +12,11 @@ logger = setup_logger()
 
 if __name__ == "__main__":
     config_path, data_path, model_path = sys.argv[1:4]
+    os.makedirs("./outputs/spark-events", exist_ok=True)
+    """
+    export SPARK_HISTORY_OPTS="-Dspark.history.fs.logDirectory=file:///Users/zwt/Desktop/github_project/spark-lab/outputs/spark-events"
+    $SPARK_HOME/sbin/start-history-server.sh
+    """
 
     logger.info("程序启动，开始加载配置")
     config = load_config(config_path)

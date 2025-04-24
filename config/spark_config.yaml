@@ -7,3 +7,6 @@ config:
   spark.sql.execution.arrow.pyspark.enabled: true
   spark.dynamicAllocation.enabled: false
   spark.ui.showConsoleProgress: true
+
+  spark.eventLog.enabled: true
+  spark.eventLog.dir: file:///Users/zwt/Desktop/github_project/spark-lab/outputs/spark-events
