@@ -2,8 +2,8 @@
 food_kmeans_model/*
 
 data/*
-models/*
+models
 
 */__pycache__
 
-outputs/
+outputs
